@@ -3,7 +3,7 @@
 # Maintainer: Dan Johansen <strit@manjaro.org>
 
 pkgbase=linux-pinebookpro
-_srcname=linux-mainline-kernel
+_srcname=mainline-kernel
 _kernelname=${pkgbase#linux}
 _desc="AArch64 Pinebook Pro kernel"
 pkgver=5.4.0
@@ -43,13 +43,13 @@ source=("https://github.com/mrfixit2001/mainline-kernel/archive/${_commit}.zip"
         '0011-bootsplash.patch'
         '0012-bootsplash.patch'
         '0013-bootsplash.patch')
-md5sums=('418e69f6da3ed274135a1879c8dd4109'
+md5sums=('9be8a437bbb2eb64ddafe1da7b687754'
          '6ee347975dca719ecd63a846cc5983b2'
          '7005141e542864b4e3cf6141ff642cf9'
          '9986e28b5c2c3c62a5c3bb53abd94640'
          '552ea82c3a5e14ca9149da8c4b4d5a82'
          'b87552062e9a61e5c100a59c7eefcfb7'
-         '7f1a96e24f5150f790df94398e9525a3'
+         '3d4450ca34a33fd6e21fd8d9f706fdd1'
          '61c5ff73c136ed07a7aadbf58db3d96a'
          '584777ae88bce2c5659960151b64c7d8'
          '41cb5fef62715ead2dd109dbea8413d6'
