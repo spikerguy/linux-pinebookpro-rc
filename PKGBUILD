@@ -7,14 +7,14 @@ _srcname=linux-mainline-kernel
 _kernelname=${pkgbase#linux}
 _desc="AArch64 Pinebook Pro kernel"
 pkgver=5.4.0
-pkgrel=0.1
+pkgrel=0.2
 arch=('aarch64')
-url="https://github.com/ayufan-rock64/linux-mainline-kernel"
+url="https://github.com/mrfixit2001/mainline-kernel"
 license=('GPL2')
 makedepends=('xmlto' 'docbook-xsl' 'kmod' 'inetutils' 'bc' 'git' 'uboot-tools' 'vboot-utils' 'dtc')
 options=('!strip')
-_commit=f8639cacc3989a9743ed04eb3a51eb2858174a42
-source=("https://github.com/ayufan-rock64/linux-mainline-kernel/archive/${_commit}.zip"
+_commit=a77d78c120aad444a96df2090221d2cb68b1a979
+source=("https://github.com/mrfixit2001/mainline-kernel/archive/${_commit}.zip"
         #"http://www.kernel.org/pub/linux/kernel/v5.x/patch-${pkgver}.xz"
         '0001-net-smsc95xx-Allow-mac-address-to-be-set-as-a-parame.patch'
         '0002-arm64-dts-rockchip-disable-pwm0-on-rk3399-firefly.patch'
@@ -71,7 +71,7 @@ md5sums=('418e69f6da3ed274135a1879c8dd4109'
 
 prepare() {
   cd ${_srcname}-${_commit}
-  sed -i s/"EXTRAVERSION = -rc1"/"EXTRAVERSION ="/ Makefile
+  sed -i s/"EXTRAVERSION = -rc2"/"EXTRAVERSION ="/ Makefile
   # add upstream patch
   #git apply --whitespace=nowarn ../patch-${pkgver}
 
